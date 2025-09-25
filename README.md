@@ -25,4 +25,8 @@ This project follows **Clean Architecture** principles, MVVM pattern with three 
 - **Kotlin**
 - **Jetpack Compose**
 - **MVVM**
-- Manual Dependency Injection (no Hilt/Koin)  
+- Manual Dependency Injection (no Hilt/Koin)
+
+## 📥 Download
+[Download APK](https://github.com/M-Abdelnabi/Country-Picker-App/releases/tag/v1.0.0)
+
