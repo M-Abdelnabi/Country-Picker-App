@@ -9,4 +9,7 @@
     <string name="i_agree_and_comply_to_the">"I agree and comply to the "</string>
     <string name="community_guidelines">community guidelines</string>
     <string name="right_arrow">right arrow</string>
+    <string name="we_will_use_this_to_verify_your_account">We will use this to verify your account</string>
+    <string name="_7xxxxxxxx">7xxxxxxxx</string>
+    <string name="continue_button">Continue</string>
 </resources>
