@@ -45,7 +45,7 @@ fun GuideLineCheckBox(
                     append(stringResource(R.string.community_guidelines))
                 }
             },
-            fontSize = 14.sp,
+            fontSize = 12.sp,
             fontWeight = FontWeight.Normal
         )
     }

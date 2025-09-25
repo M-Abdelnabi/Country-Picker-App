@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuBox
@@ -23,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -44,6 +46,7 @@ fun CountryPickerSection(
     isExpanded: Boolean = false,
     countries: List<CountryUIState>,
     value: String = "",
+    maxLength : Int = 11,
     placeholder: String,
     onValueChange: (String) -> Unit,
     onDropDownClicked: () -> Unit = {}
@@ -55,7 +58,10 @@ fun CountryPickerSection(
     ) {
         OutlinedTextField(
             value = value,
-            onValueChange = onValueChange,
+            onValueChange = { newValue ->
+                val digitsOnly = newValue.filter { it.isDigit() }.take(maxLength)
+                onValueChange(digitsOnly)
+            },
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier
                 .fillMaxWidth()
@@ -64,7 +70,7 @@ fun CountryPickerSection(
             leadingIcon = {
                 Row(
                     modifier = Modifier
-                        .padding(8.dp)
+                        .padding(10.dp)
                         .menuAnchor(MenuAnchorType.SecondaryEditable, true),
                     horizontalArrangement = Arrangement.spacedBy(4.dp),
                     verticalAlignment = Alignment.CenterVertically
@@ -85,7 +91,7 @@ fun CountryPickerSection(
                         text = selectedCountry.countryCode,
                         color = Black,
                         maxLines = 1,
-                        fontSize = 16.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -96,7 +102,7 @@ fun CountryPickerSection(
                     color = gray,
                     maxLines = 1,
                     overflow = TextOverflow.Clip,
-                    fontSize = 14.sp,
+                    fontSize = 12.sp,
                     fontWeight = FontWeight.Medium
                 )
             },
@@ -105,7 +111,8 @@ fun CountryPickerSection(
                 unfocusedBorderColor = lightGray,
                 focusedTextColor = Black,
                 unfocusedTextColor = Black,
-            )
+            ),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Phone)
         )
         ExposedDropdownMenu(
             expanded = isExpanded,

@@ -6,8 +6,8 @@ import com.example.countrypickerapp.data.source.remote.dto.CountryDto
 class CountryRemoteDataSourceImp : CountryRemoteDataSource {
     override suspend fun getCountries(): List<CountryDto> {
         return listOf(
-            CountryDto("Afghanistan", "+93", R.drawable.ic_afghanistan_flag),
             CountryDto("Egypt", "+20", R.drawable.ic_egypt_flag),
+            CountryDto("Afghanistan", "+93", R.drawable.ic_afghanistan_flag),
             CountryDto("Argentina", "+54", R.drawable.ic_argentina_flag),
             CountryDto("Australia", "+61", R.drawable.ic_australia_flag),
             CountryDto("Austria", "+43", R.drawable.ic_austria_flag),
@@ -40,6 +40,6 @@ class CountryRemoteDataSourceImp : CountryRemoteDataSource {
             CountryDto("Syria", "+963", R.drawable.ic_syria_flag),
             CountryDto("Turkey", "+90", R.drawable.ic_turkey_flag),
             CountryDto("Yemen", "+967", R.drawable.ic_yemen_flag)
-            )
+        )
     }
 }

@@ -43,11 +43,11 @@ fun CountryPickerContent(
             .background(color = White)
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp)
-            .padding(top = 36.dp),
+            .padding(top = 40.dp),
     ) {
         AppHeader(
             modifier = Modifier
-                .padding(bottom = 24.dp)
+                .padding(bottom = 28.dp)
         )
 
         CountryPickerSection(
@@ -71,7 +71,7 @@ fun CountryPickerContent(
         GuideLineCheckBox(
             isChecked = state.isCheckedBox,
             onCheckedChange = action::onCheckBoxClicked,
-            modifier = Modifier.padding(top = 18.dp, bottom = 24.dp)
+            modifier = Modifier.padding(top = 22.dp, bottom = 28.dp)
         )
 
         MyCustomButton(
