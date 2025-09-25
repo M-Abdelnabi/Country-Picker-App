@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Country Picker App</string>
+    <string name="one_last_step">One last step</string>
+    <string name="please_login_or_signup_for_a">Please login or signup for a\n</string>
+    <string name="free">"free "</string>
+    <string name="account_to_continue">account to continue</string>
+    <string name="flag">Flag</string>
+    <string name="drop_down_icon">drop down icon</string>
+    <string name="i_agree_and_comply_to_the">"I agree and comply to the "</string>
+    <string name="community_guidelines">community guidelines</string>
+    <string name="right_arrow">right arrow</string>
 </resources>
