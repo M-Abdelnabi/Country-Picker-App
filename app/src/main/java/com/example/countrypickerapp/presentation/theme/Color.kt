@@ -1,4 +1,4 @@
-package com.example.countrypickerapp.ui.theme
+package com.example.countrypickerapp.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
