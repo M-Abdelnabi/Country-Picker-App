@@ -10,10 +10,10 @@ https://github.com/user-attachments/assets/b4011855-5e97-4f0f-84a4-e12e40a3e3b6
 
 
 ## 📱Features
-- **Country Selection**: Choose from 34+ countries with their respective flags and country codes
-- **Phone Number Input**: Enter phone number with automatic country code formatting
-- **Modern UI**: Built with Jetpack Compose with responsive ui to match any android device screen size
-- **Validation**: Input validation with terms acceptance checkbox
+- **Country Selection** : Choose from 34+ countries with their respective flags and country codes
+- **Phone Number Input** : Enter phone number with automatic country code formatting
+- **Modern UI** : Built with Jetpack Compose with responsive ui to match any android device screen size
+- **Validation** : Input validation with terms acceptance checkbox
 
  ## 🏗️Architecture
 This project follows **Clean Architecture** principles, MVVM pattern with three main layers:
